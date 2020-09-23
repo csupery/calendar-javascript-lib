@@ -515,7 +515,6 @@ Organizer.prototype.list = function (data) {
         } else {
             var link = document.createElement("A");
             link.href = data[i].link;
-            link.target = "_blank";
             link.class = this.id + " link";
             link.appendChild(textNode);
 
