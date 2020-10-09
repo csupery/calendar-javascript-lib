@@ -698,12 +698,12 @@ Organizer.prototype.setOnClickListener = function (theCase, backCallback, nextCa
 
 Organizer.prototype.setupLongClickBlock = function (blockId, organizerInstance, callback) {
     var calendarInstance = organizerInstance.calendar;
-    var pressTimer;
+   
     var mouseDownEvent = function () {
-        clearTimeout(pressTimer);
+        
         document.getElementById(calendarInstance.id + "-day-num-" + blockId).dataset.longpressed = "-";
 
-        pressTimer = window.setTimeout(function () {
+        window.setTimeout(function () {
             if (document.getElementById(calendarInstance.id + "-day-num-" + blockId).innerHTML.length > 0) {
                 if (document.getElementById(calendarInstance.id + "-day-num-" + blockId).dataset.longpressed == "false")
                     return;
