@@ -703,7 +703,7 @@ Organizer.prototype.setupLongClickBlock = function (blockId, organizerInstance, 
         clearTimeout(pressTimer);
         document.getElementById(calendarInstance.id + "-day-num-" + blockId).dataset.longpressed = "-";
 
-        window.setTimeout(function () {
+        pressTimer = window.setTimeout(function () {
             if (document.getElementById(calendarInstance.id + "-day-num-" + blockId).innerHTML.length > 0) {
                 if (document.getElementById(calendarInstance.id + "-day-num-" + blockId).dataset.longpressed == "false")
                     return;
